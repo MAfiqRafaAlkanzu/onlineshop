@@ -1,0 +1,188 @@
+.home-content{
+    max-width: 2000px;
+    width: 100%;
+    margin: auto;
+
+
+    #image-slider{
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .splide__slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 99px;
+        border: 1px solid white;
+    }
+
+    .splide__progress__bar {
+        height: 3px;
+        background: #410101;
+    }
+
+    .sale-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 650px;
+        align-items: center;
+        padding: 10px 20px;
+        margin-top: 60px;
+        flex-wrap: wrap;
+
+        .flash-sale{
+            font-size: 30px;
+        }
+
+        a{
+            color: #410101;
+            text-decoration: none;
+            font-size: 20px;
+
+            :hover{
+                color: #000000;
+            }
+        }
+
+        .clock {
+            &-day {
+              &:before {
+                content: var(--timer-day);
+              }
+            }
+            &-hours {
+              &:before {
+                content: var(--timer-hours);
+              }
+            }
+            &-minutes {
+              &:before {
+                content: var(--timer-minutes);
+              }
+            }
+            &-seconds {
+              &:before {
+                content: var(--timer-seconds);
+              }
+            }
+        }
+          
+          .clock {
+            &-container {
+              border-radius: 5px;
+              display: flex;
+              width: 100%;
+              max-width: 300px;
+            }
+            &-col {
+              text-align: center;
+              margin-right: 5px;
+              margin-left: 5px;
+              min-width: 90px;
+              position: relative;
+              &:not(:last-child):before,
+              &:not(:last-child):after{
+                content: "";
+                background-color: rgba(0, 0, 0, 0.3);
+                height: 5px;
+                width: 5px;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                right: -10px;
+              }
+              &:not(:last-child):before {
+                top: 35%;
+              }
+              &:not(:last-child):after {
+                top: 50%;
+              }
+            }
+            &-timer {
+              &:before {
+                color: #000000;
+                font-size: 2rem;
+                text-transform: uppercase;
+              }
+            }
+            &-label {
+              color: rgba(0, 0, 0, 0.35);
+              text-transform: uppercase;
+              font-size: .5rem;
+              margin-top: 10px;
+            }
+        }
+          
+          @media (max-width: 825px) {
+            .clock-container {
+            flex-direction: column;
+              padding-top: 40px;
+              padding-bottom: 40px;
+            }
+            .clock-col {
+              & + & {
+                margin-top: 20px;
+              }
+              &:before,
+              &:after {
+                display: none!important;
+              }
+            }
+        }
+    }
+
+    .sale-items{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .sale-product{
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        // background-color: #7A7265;
+        padding: 20px 20px;
+        img{
+          max-width: inherit;
+          border-radius: 10px 10px 0 0;
+        }
+
+        .price{
+          background-color: #7A7265;
+          padding: 20px 10px;
+          border-radius: 0 0 10px 10px;
+          display: flex;
+          flex-direction: column;
+
+          .new-price{
+            font-size: 20px;
+          }
+
+          .old-price{
+            font-size: 15px;
+            color: #2b2b2b;
+            text-decoration: line-through;
+
+            .discount{
+              color: red;
+              text-decoration: none;
+              display: inline-block;
+            }
+          }
+
+          .w3-border{
+            margin-top: 10px;
+            border: 1px solid #7a7265 !important;
+            border-radius: 5px;
+            background-color: #2b2b2b;
+            .w3-red{
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+    
+}

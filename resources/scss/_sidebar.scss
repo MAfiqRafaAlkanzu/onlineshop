@@ -1,0 +1,157 @@
+.cart-sidebar{
+    top: 0;
+    position: absolute;
+    width: 25%;
+    height: 100vh;
+    background-color: #fff;
+    right: 0;
+    z-index: 1;
+    transform: translateX(100%);
+    // display: none;
+    max-width: 650px;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    a{
+        color: #000;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+    h1{
+        #cartClose {
+            font-size: 50px;  // Make sure the size matches the cart button
+            position: absolute;
+            right: 20px;  // Adjust the right margin to align with the cart button
+            top: 20px;  // Same top margin as the navbar for alignment
+            cursor: pointer;
+        
+            &:hover {
+                color: #7a7a7a;
+            }
+        }
+    }
+
+    i:hover{
+        color: #727272;
+    }
+
+    .cart-contents {
+        flex: 1;  // Allows the cart-content to take up the remaining space in the sidebar
+        overflow-y: auto;  // Adds a scrollbar if content overflows
+        padding: 10px;  // Adds padding around the content
+        display: flex;
+        flex-direction: column;  // Ensures cart items are stacked vertically
+        gap: 10px; 
+        max-height: 1000px;
+        height: 100%;
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+
+    }
+
+
+    .cart-items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 550px;
+        width: 100%;
+        border: #7c7c7c 1px solid; 
+        border-radius: 5px;
+        background-color: #ffffff;
+        padding: 10px;
+        cursor: pointer;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+
+        .cart-element{
+            max-width: 300px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            overflow-wrap: break-word;
+        }
+
+        .cart-button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100px;
+            width: 100%;
+
+
+            .value-button{
+                background-color: #a1a1a1;
+                font-size: 15px;
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            .value-button:hover{
+                cursor: pointer;
+                background-color: #d3d3d3;
+            }
+
+            input{
+                max-width: 30px;
+                width: 100%;
+                outline: none;
+                border: none;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .cart-checkout {
+        width: 100%;
+        padding: 10px;
+        background-color: #f8f8f8;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); // Optional: Add a shadow for better separation
+
+        .cart-total{
+            text-align: right;
+            font-size: 20px;
+        }
+
+        button.cart-checkout-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: black 1px solid;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #ffffff;
+                color: #000;  // Darken the background on hover for a visual effect
+            }
+        }
+    }
+
+
+}
+
+.background {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+
+
